@@ -10,7 +10,7 @@ import (
 )
 
 func HandelWord(word string) (string, error) {
-	word = strings.Trim(word, " ")
+	word = strings.TrimSpace(word)
 	if n := strings.Count(word, " "); n > 0 {
 		return "", errors.New("Want only one word, got: " + word)
 	}
